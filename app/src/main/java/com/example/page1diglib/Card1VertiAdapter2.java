@@ -1,28 +1,24 @@
 package com.example.page1diglib;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
-public class Card1VertiAdapter extends RecyclerView.Adapter<Card1VertiAdapter.MyViewHolder> {
+public class Card1VertiAdapter2 extends RecyclerView.Adapter<Card1VertiAdapter2.MyViewHolder> {
 
 
-    ArrayList<Card1Verti> name;
+    ArrayList<com.example.page1diglib.Card1Verti2> name;
     Context context;
 
-    public Card1VertiAdapter( ArrayList<Card1Verti> name,Context context)
+    public Card1VertiAdapter2(ArrayList<com.example.page1diglib.Card1Verti2> name,Context context)
     {
 
         this.name = name;
@@ -34,14 +30,14 @@ public class Card1VertiAdapter extends RecyclerView.Adapter<Card1VertiAdapter.My
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v;
-        v= LayoutInflater.from(parent.getContext()).inflate(R.layout.card1verti,parent,false);
+        v= LayoutInflater.from(parent.getContext()).inflate(R.layout.card1verti2,parent,false);
         MyViewHolder vHolder=new MyViewHolder(v);
         return vHolder;
     }
 
     @Override
     public void onBindViewHolder( @NonNull MyViewHolder holder, int position) {
-        Card1Verti currentMath = name.get(position);
+        com.example.page1diglib.Card1Verti2 currentMath = name.get(position);
 
 //        holder.imageCross.setImageResource(currentMath.getImageCross());
 //        holder.imageView.setImageResource(currentMath.getImageView());
@@ -53,18 +49,6 @@ public class Card1VertiAdapter extends RecyclerView.Adapter<Card1VertiAdapter.My
         holder.lecImg.setImageResource(currentMath.getLecimg());
         holder.vidImg.setImageResource(currentMath.getVidImg());
         holder.queImg.setImageResource(currentMath.getQueImg());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context, MainActivityP2.class);
-                context.startActivity(intent);
-
-
-
-
-//
-            }
-        });
 
     }
 

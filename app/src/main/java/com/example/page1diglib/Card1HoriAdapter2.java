@@ -8,16 +8,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Card1HoriAdapter extends RecyclerView.Adapter<Card1HoriAdapter.CardViewHolder> {
+public class Card1HoriAdapter2 extends RecyclerView.Adapter<Card1HoriAdapter2.CardViewHolder> {
 
-    ArrayList<Card1Hori> returned;
+    ArrayList<com.example.page1diglib.Card1Hori2> returned;
     Context context;
 
-    public Card1HoriAdapter(ArrayList<Card1Hori> returned,Context context) {
+    public Card1HoriAdapter2(ArrayList<com.example.page1diglib.Card1Hori2> returned, Context context) {
         this.returned = returned;
         this.context=context;
     }
@@ -25,20 +26,20 @@ public class Card1HoriAdapter extends RecyclerView.Adapter<Card1HoriAdapter.Card
 
     @NonNull
     @Override
-    public Card1HoriAdapter.CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card1hori ,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card1hori2,parent,false);
         CardViewHolder cvh = new CardViewHolder(view);
         return cvh;
     }
 
     @Override
     public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
-        Card1Hori currentCards = this.returned.get(position);
+        com.example.page1diglib.Card1Hori2 currentCards = this.returned.get(position);
         holder.imageForCard.setImageResource(currentCards.getImageForCard());
         holder.zeroText.setText(currentCards.getZeroText());
         holder.subjectText.setText(currentCards.getSubjectText());
-
+        holder.infoText.setText(currentCards.getInfotext());
     }
 
     @Override
@@ -49,7 +50,7 @@ public class Card1HoriAdapter extends RecyclerView.Adapter<Card1HoriAdapter.Card
     public class CardViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageForCard;
-        TextView zeroText,subjectText;
+        TextView zeroText,subjectText,infoText;
 
 
 
@@ -58,7 +59,7 @@ public class Card1HoriAdapter extends RecyclerView.Adapter<Card1HoriAdapter.Card
             imageForCard=itemView.findViewById(R.id.imageForCard);
             zeroText=itemView.findViewById(R.id.zeroText);
             subjectText=itemView.findViewById(R.id.subjectText);
-
+            infoText=itemView.findViewById(R.id.infoText);
         }
     }
 }

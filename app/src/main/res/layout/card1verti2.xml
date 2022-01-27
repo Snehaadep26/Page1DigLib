@@ -4,11 +4,8 @@
     android:layout_width="179dp"
     android:layout_height="144dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
     app:cardCornerRadius="5dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginBottom="8dp"
     android:background="#FFFFFF"
     android:id="@+id/cardViewVertical"
     app:cardElevation="5dp"
@@ -20,7 +17,7 @@
 
         <TextView
             android:id="@+id/Atext"
-            android:layout_width="wrap_content"
+            android:layout_width="23dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/pt_serif_bold"

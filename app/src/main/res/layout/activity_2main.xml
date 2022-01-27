@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FAFAFA"
     android:id="@+id/scrollMain"
-    tools:context=".MainActivity">
+    tools:context=".MainActivityP2">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,7 +18,6 @@
             android:id="@+id/toolbar"
             android:layout_width="414dp"
             android:layout_height="64dp"
-            android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -174,7 +173,7 @@
         </ScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="480dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@id/constMain"
             app:layout_constraintTop_toBottomOf="@+id/scrollview2"
@@ -186,7 +185,7 @@
                 android:id="@+id/textView"
                 android:layout_width="94dp"
                 android:layout_height="21dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="10th Standard"
                 android:textColor="#191919"
@@ -221,11 +220,11 @@
             </androidx.recyclerview.widget.RecyclerView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+                android:layout_width="470dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginBottom="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recyler5"
                 app:layout_constraintVertical_bias="0.307">
@@ -322,6 +321,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginBottom="24dp"
                     android:text="Library"
+                    android:textAlignment="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/testText">
 
@@ -334,7 +334,7 @@
                     android:layout_marginTop="32dp"
                     android:src="@drawable/ic_more"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.551"
+                    app:layout_constraintHorizontal_bias="0.278"
                     app:layout_constraintStart_toEndOf="@id/librImg"
                     app:layout_constraintTop_toTopOf="parent">
 
